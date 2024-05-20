@@ -19,20 +19,7 @@
         <button type="submit">Submit</button>
     </form>
 
-    <script>
-        document.getElementById("rmaForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            
-            let formData = {
-                name: document.getElementById("name").value,
-                email: document.getElementById("email").value,
-                product: document.getElementById("product").value,
-                reason: document.getElementById("reason").value
-            };
-
-            localStorage.setItem("rmaData", JSON.stringify(formData));
-            alert("RMA Data Saved Locally");
-        });
-    </script>
+    <!-- 引入外部 JavaScript 文件 -->
+    <script src="https://github.com/Sethjesus/RMA/blob/main/formHandler.js"></script>
 </body>
 </html>
