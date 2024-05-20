@@ -10,7 +10,7 @@ document.getElementById('rmaForm').addEventListener('submit', function(event) {
     };
 
     fetch('/submit-form', {
-        method: 'POST', // 确保使用的方法与服务器支持的一致
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
@@ -19,5 +19,9 @@ document.getElementById('rmaForm').addEventListener('submit', function(event) {
     .then(response => response.text())
     .then(data => alert('Form submitted successfully: ' + data))
     .catch(error => console.error('Error:', error));
-    
 });
+
+
+
+
+
