@@ -6,20 +6,64 @@
     <title>RMA Form</title>
 </head>
 <body>
-    <h1>RMA Form</h1>
-    <form id="rmaForm">
-        <label for="name">Name:</label>
+    <h2>Return Merchandise Authorization (RMA) Form</h2>
+    <form action="mailto:jackey1688@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        <label for="product">Product:</label>
-        <input type="text" id="product" name="product" required><br><br>
-        <label for="reason">Reason for Return:</label>
-        <textarea id="reason" name="reason" required></textarea><br><br>
-        <button type="submit">Submit</button>
-    </form>
 
-    <!-- 使用 jsDelivr CDN 引入 formHandler.js -->
-    <script src="https://cdn.jsdelivr.net/gh/Sethjesus/RMA@main/formHandler.js"></script>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="order-number">Order Number:</label><br>
+        <input type="text" id="order-number" name="order-number" required><br><br>
+
+        <label for="product">Product:</label><br>
+        <select id="product" name="product" required>
+            <option value="" disabled selected>Select a product</option>
+            <optgroup label="Current Transformer">
+                <option value="CM02">CM02</option>
+                <option value="CM02-4">CM02-4</option>
+                <option value="CM02-6">CM02-6</option>
+                <option value="CM02-7">CM02-7</option>
+                <option value="CM02-8">CM02-8</option>
+                <option value="CM03">CM03</option>
+                <option value="CM03-5">CM03-5</option>
+                <option value="CM04">CM04</option>
+                <option value="CM04-05">CM04-05</option>
+                <option value="FM02">FM02</option>
+                <option value="FM03">FM03</option>
+                <option value="FM04">FM04</option>
+                <option value="HM01">HM01</option>
+                <option value="TM01">TM01</option>
+            </optgroup>
+            <optgroup label="Gateway">
+                <option value="GW06">GW06</option>
+                <option value="GW06-03">GW06-03</option>
+                <option value="GW08">GW08</option>
+                <option value="RP01">RP01</option>
+            </optgroup>
+            <optgroup label="Wired">
+                <option value="50A">50A</option>
+                <option value="100A">100A</option>
+            </optgroup>
+            <optgroup label="Smart Meter">
+                <option value="Smart Meter">Smart Meter</option>
+            </optgroup>
+        </select><br><br>
+
+        <label for="bt-mac">BT MAC:</label><br>
+        <input type="text" id="bt-mac" name="bt-mac" required><br><br>
+
+        <label for="wifi-mac">WiFi MAC:</label><br>
+        <input type="text" id="wifi-mac" name="wifi-mac" required><br><br>
+
+        <label for="issue">Issue Description:</label><br>
+        <textarea id="issue" name="issue" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
